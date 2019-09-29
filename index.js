@@ -1,6 +1,10 @@
 const ActionBase = require('@mohism/cliwrap/libs/action.class');
 
 class ActionAsPkg extends ActionBase {
+  constructor() {
+    super();
+    this.info('这是一个额外的输出信息');
+  }
   options() {
     return {
       boom: {
@@ -16,9 +20,9 @@ class ActionAsPkg extends ActionBase {
 
   async run(argv) {
     const { boom } = argv;
-    if (boom){
+    if (boom) {
       this.err('成功毁灭地球');
-    }else{
+    } else {
       this.info('饶你一命');
     }
   }
