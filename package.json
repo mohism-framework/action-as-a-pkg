@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "npx eslint ./src/*.** --fix",
+    "build": "npx tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -13,6 +15,12 @@
   "author": "lanhao",
   "license": "ISC",
   "dependencies": {
-    "@mohism/cliwrap": "^1.0.11"
+    "@mohism/cli-wrapper": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.12",
+    "eslint": "^6.5.1",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.4"
   }
 }

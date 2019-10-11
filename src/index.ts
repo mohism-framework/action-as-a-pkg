@@ -1,11 +1,11 @@
-const ActionBase = require('@mohism/cliwrap/libs/action.class');
+import ActionBase from '@mohism/cli-wrapper/dist/libs/action.class';
+import { Dict, ArgvOption } from '@mohism/cli-wrapper/dist/libs/utils/type';
 
 class ActionAsPkg extends ActionBase {
   constructor() {
     super();
-    this.info('这是一个额外的输出信息');
   }
-  options() {
+  options(): Dict<ArgvOption> {
     return {
       boom: {
         desc: '是否毁灭地球',
@@ -14,12 +14,12 @@ class ActionAsPkg extends ActionBase {
     };
   }
 
-  description() {
+  description(): string {
     return '通过npm包的方式分享你的命令';
   }
 
-  async run(argv) {
-    const { boom } = argv;
+  async run(options: Dict<any>): Promise<any> {
+    const { boom } = options;
     if (boom) {
       this.err('成功毁灭地球');
     } else {
@@ -28,4 +28,4 @@ class ActionAsPkg extends ActionBase {
   }
 }
 
-module.exports = new ActionAsPkg();
+export default new ActionAsPkg();
