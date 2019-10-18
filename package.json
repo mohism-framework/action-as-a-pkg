@@ -1,7 +1,6 @@
 {
   "name": "@mohism/action-as-a-pkg",
-  "version": "1.0.6",
-  "description": "",
+  "version": "1.0.7",
   "main": "dist/index.js",
   "scripts": {
     "lint": "npx eslint ./src/*.** --fix",
@@ -22,5 +21,14 @@
     "eslint": "^6.5.1",
     "ts-node": "^8.4.1",
     "typescript": "^3.6.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohism-framework/action-as-a-pkg.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mohism-framework/action-as-a-pkg/issues"
+  },
+  "homepage": "https://github.com/mohism-framework/action-as-a-pkg#readme",
+  "description": "action as a pkg"
 }

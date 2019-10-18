@@ -28,4 +28,4 @@ class ActionAsPkg extends ActionBase {
   }
 }
 
-export default new ActionAsPkg();
+export = new ActionAsPkg();
