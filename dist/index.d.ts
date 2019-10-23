@@ -7,4 +7,4 @@ declare class ActionAsPkg extends ActionBase {
     run(options: Dict<any>): Promise<any>;
 }
 declare const _default: ActionAsPkg;
-export = _default;
+export default _default;
