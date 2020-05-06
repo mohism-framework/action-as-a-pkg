@@ -1,5 +1,5 @@
-import ActionBase from '@mohism/cli-wrapper/dist/libs/action.class';
-import { Dict, ArgvOption } from '@mohism/cli-wrapper/dist/libs/utils/type';
+import { ActionBase, ArgvOption } from '@mohism/sloty';
+import { Dict } from '@mohism/utils';
 declare class ActionAsPkg extends ActionBase {
     constructor();
     options(): Dict<ArgvOption>;
