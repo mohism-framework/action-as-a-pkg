@@ -1,4 +1,4 @@
-import { ActionBase, ArgvOption } from '@mohism/sloty';
+import { ActionBase, ArgvOption, IWithSubCommands } from '@mohism/sloty';
 import { Dict } from '@mohism/utils';
 
 class ActionAsPkg extends ActionBase {
@@ -18,7 +18,7 @@ class ActionAsPkg extends ActionBase {
     return '通过npm包的方式分享你的命令';
   }
 
-  async run(options: Dict<any>): Promise<any> {
+  async run(options: IWithSubCommands): Promise<any> {
     const { boom } = options;
     if (boom) {
       this.err('成功毁灭地球');
